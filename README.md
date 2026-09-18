@@ -5,7 +5,7 @@ Evidence for Boundary Conditions in Population-Level Behavioural Fidelity"*
 (under double-blind review). The study compares LLM-generated respondent
 populations (`claude-haiku-4-5`, `gemini-3.7-flash`) with the human outcomes of a
 public Brazilian survey on adaptive residential behaviour and air-conditioning use
-(Ramos et al., 2020; 3,259 residents, 281 cities), under strict holdout of every
+(Ramos et al., 2021; 3,259 residents, 281 cities), under strict holdout of every
 target outcome.
 
 ## Design in brief
@@ -70,8 +70,8 @@ python3 02_analyze_results.py     # prints all reported numbers; writes ../resul
 paired-bootstrap changes, income and climate gradients, action-prevalence vectors
 (MAE, Pearson, Spearman, mean selected count), frequency distributions with total
 variation distance, hours and setpoint means and standard deviations, and the
-pre-specified recovery criteria, including the counts summarised in the recovery figure. The complete output is stored in
-`results/analysis_output.txt`.
+pre-specified recovery criteria, including the counts summarised in the recovery
+figure. The complete output is stored in `results/analysis_output.txt`.
 
 `03_export_model_outputs_from_db.py` reads a private database through the
 environment variables `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`; it cannot be
@@ -98,7 +98,7 @@ condition in `data/manifests/run_manifests.json`.
 
 ## Data source
 
-Ramos, G., et al. (2020). Adaptive behaviour and air conditioning use in Brazilian
+Ramos, G., et al. (2021). Adaptive behaviour and air conditioning use in Brazilian
 residential buildings. *Building Research & Information*, 49(5), 496–511.
 https://doi.org/10.1080/09613218.2020.1804314
 
