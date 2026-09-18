@@ -1,0 +1,27 @@
+comparison,check,passed,relative_change
+instrument_vs_baseline,M2 count error claude-hot,True,0.544
+instrument_vs_baseline,M2 prevalence MAE claude-hot,True,0.2517
+instrument_vs_baseline,M2 Pearson&Spearman not worse claude-hot,True,0.2176
+instrument_vs_baseline,M2 count error claude-cold,True,0.6755
+instrument_vs_baseline,M2 prevalence MAE claude-cold,False,0.1065
+instrument_vs_baseline,M2 Pearson&Spearman not worse claude-cold,False,-0.0615
+instrument_vs_baseline,M3 frequency TVD claude,False,0.1014
+instrument_vs_baseline,M3 setpoint sd error claude,False,-0.0796
+instrument_vs_baseline,M2 count error gemini-hot,True,0.3071
+instrument_vs_baseline,M2 prevalence MAE gemini-hot,False,0.1258
+instrument_vs_baseline,M2 Pearson&Spearman not worse gemini-hot,True,0.053
+instrument_vs_baseline,M2 count error gemini-cold,True,0.3646
+instrument_vs_baseline,M2 prevalence MAE gemini-cold,True,0.2985
+instrument_vs_baseline,M2 Pearson&Spearman not worse gemini-cold,True,0.0031
+instrument_vs_baseline,M3 frequency TVD gemini,False,-0.3462
+instrument_vs_baseline,M3 setpoint sd error gemini,False,0.1298
+narrative_vs_instrument,M1 has-AC error claude,False,-0.16
+narrative_vs_instrument,M1 NV-preference error claude,False,-0.3478
+narrative_vs_instrument,M3 frequency TVD claude,True,0.4194
+narrative_vs_instrument,M3 hours sd error claude,True,0.8865
+narrative_vs_instrument,M3 setpoint sd error claude,False,-0.0803
+narrative_vs_instrument,M1 has-AC error gemini,False,-3.75
+narrative_vs_instrument,M1 NV-preference error gemini,False,0.0588
+narrative_vs_instrument,M3 frequency TVD gemini,False,0.0286
+narrative_vs_instrument,M3 hours sd error gemini,False,-0.1867
+narrative_vs_instrument,M3 setpoint sd error gemini,False,-0.0389

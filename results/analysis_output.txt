@@ -1,0 +1,121 @@
+Respondents: 248 (Module 3: 120); model responses: 7120
+Metered cost: {'baseline': 1.5101, 'instrument': 1.0104, 'narrative': 0.5084}  total US$3.0289
+
+==============================================================================
+MODULE 1 - adoption
+==============================================================================
+Human: prefers natural ventilation 87.90% | household has AC 56.05%
+  Baseline   claude NV  72.18% (err 15.73pp) | AC  32.66% (err 23.39pp)
+  Baseline   gemini NV  57.66% (err 30.24pp) | AC  49.19% (err  6.85pp)
+  Instrument claude NV  69.35% (err 18.55pp) | AC  35.89% (err 20.16pp)
+  Instrument gemini NV  60.48% (err 27.42pp) | AC  52.82% (err  3.23pp)
+  Narrative  claude NV  62.90% (err 25.00pp) | AC  32.66% (err 23.39pp)
+  Narrative  gemini NV  62.10% (err 25.81pp) | AC  40.73% (err 15.32pp)
+
+Paired bootstrap changes in prevalence (percentage points, 95% CI):
+  claude baseline->instrument NV preference    -2.82 [-5.24, -0.40]
+  claude baseline->instrument has AC           +3.23 [-1.21, +7.66]
+  claude instrument->narrative  NV preference    -6.45 [-10.08, -3.23]
+  claude instrument->narrative  has AC           -3.23 [-8.06, +2.02]
+  gemini baseline->instrument NV preference    +2.82 [-0.40, +6.05]
+  gemini baseline->instrument has AC           +3.63 [+0.40, +6.85]
+  gemini instrument->narrative  NV preference    +1.61 [-2.02, +5.24]
+  gemini instrument->narrative  has AC          -12.10 [-16.53, -8.06]
+
+AC ownership by income tier (share %, n):
+  Human         0.0 (n=7) |  27.3 (n=22) |  46.2 (n=39) |  62.0 (n=100) |  64.4 (n=45) |  68.6 (n=35) | monotone non-decreasing: True
+  Baseline   claude   0.0 |   0.0 |  17.9 |  34.0 |  46.7 |  54.3 | non-decreasing: True | Spearman vs tier +0.99
+  Baseline   gemini   0.0 |   0.0 |  15.4 |  51.0 |  75.6 |  88.6 | non-decreasing: True | Spearman vs tier +0.99
+  Instrument claude   0.0 |   4.5 |  20.5 |  36.0 |  44.4 |  68.6 | non-decreasing: True | Spearman vs tier +1.00
+  Instrument gemini   0.0 |   0.0 |  17.9 |  55.0 |  80.0 |  94.3 | non-decreasing: True | Spearman vs tier +0.99
+  Narrative  claude   0.0 |   9.1 |  17.9 |  35.0 |  40.0 |  54.3 | non-decreasing: True | Spearman vs tier +1.00
+  Narrative  gemini   0.0 |   0.0 |   7.7 |  39.0 |  68.9 |  80.0 | non-decreasing: True | Spearman vs tier +0.99
+
+AC ownership by climate group (share %): ['extremely_hot', 'very_hot', 'hot', 'warm']
+  Human        82.3 |  57.1 |  46.6 |  40.7 | ranking (best->worst): ['extremely_hot', 'very_hot', 'hot', 'warm']
+  Baseline   claude  41.9 |  53.6 |  27.5 |  14.8 | same ordering as human: False | Spearman +0.80
+  Baseline   gemini  77.4 |  75.0 |  34.4 |  29.6 | same ordering as human: True | Spearman +1.00
+  Instrument claude  45.2 |  50.0 |  32.8 |  14.8 | same ordering as human: False | Spearman +0.80
+  Instrument gemini  80.6 |  75.0 |  38.9 |  33.3 | same ordering as human: True | Spearman +1.00
+  Narrative  claude  46.8 |  32.1 |  29.8 |  14.8 | same ordering as human: True | Spearman +1.00
+  Narrative  gemini  69.4 |  60.7 |  26.7 |  22.2 | same ordering as human: True | Spearman +1.00
+
+Human AC ownership, extremely hot x top two income tiers: 95.2% (n=21)
+
+Human AC ownership, extremely hot x top income tier: 87.5% (n=8)
+
+==============================================================================
+MODULE 2 - habitual actions (multi-select)
+==============================================================================
+
+HOT weather - human mean #actions 3.32 (sd 1.64)
+  Baseline   claude MAE 26.34pp | Pearson 0.689 | Spearman 0.594 | mean #actions 4.88 (sd 1.12, err 1.56) | Jaccard 0.41 [diagnostic]
+  Baseline   gemini MAE 29.57pp | Pearson 0.711 | Spearman 0.611 | mean #actions 4.81 (sd 0.49, err 1.48) | Jaccard 0.45 [diagnostic]
+  Instrument claude MAE 19.71pp | Pearson 0.801 | Spearman 0.812 | mean #actions 4.03 (sd 0.98, err 0.71) | Jaccard 0.41 [diagnostic]
+  Instrument gemini MAE 25.85pp | Pearson 0.738 | Spearman 0.664 | mean #actions 4.35 (sd 0.58, err 1.03) | Jaccard 0.45 [diagnostic]
+  Change in mean #actions, baseline -> instrument (paired bootstrap):
+    claude -0.847 [-0.976, -0.710] | error in mean #actions falls 54.40%
+    gemini -0.456 [-0.532, -0.379] | error in mean #actions falls 30.71%
+
+COLD weather - human mean #actions 2.57 (sd 1.54)
+  Baseline   claude MAE 25.36pp | Pearson 0.516 | Spearman 0.644 | mean #actions 3.64 (sd 0.98, err 1.07) | Jaccard 0.33 [diagnostic]
+  Baseline   gemini MAE 18.91pp | Pearson 0.853 | Spearman 0.970 | mean #actions 4.17 (sd 1.73, err 1.59) | Jaccard 0.50 [diagnostic]
+  Instrument claude MAE 22.66pp | Pearson 0.523 | Spearman 0.583 | mean #actions 2.92 (sd 0.85, err 0.35) | Jaccard 0.37 [diagnostic]
+  Instrument gemini MAE 13.27pp | Pearson 0.923 | Spearman 0.973 | mean #actions 3.58 (sd 1.61, err 1.01) | Jaccard 0.52 [diagnostic]
+  Change in mean #actions, baseline -> instrument (paired bootstrap):
+    claude -0.722 [-0.839, -0.605] | error in mean #actions falls 67.55%
+    gemini -0.581 [-0.669, -0.496] | error in mean #actions falls 36.46%
+
+==============================================================================
+MODULE 3 - usage among bedroom-AC owners
+==============================================================================
+Human frequency (%): {'Always use': 36.7, 'Often use': 28.3, 'Sometimes use': 25.8, 'Rarely use': 9.2, 'Never use': 0.0}
+Human hours/day mean 7.36 sd 2.99 (n=120) | setpoint mean 21.35 sd 2.56 (n=108)
+  Baseline   claude TVD 0.575 | freq % [9.2, 85.8, 2.5, 2.5, 0.0] | hours 7.71 (sd 3.12) | setpoint 22.72 (sd 0.94; 37% of human sd)
+  Baseline   gemini TVD 0.217 | freq % [58.3, 25.0, 15.0, 1.7, 0.0] | hours 8.21 (sd 1.00) | setpoint 22.43 (sd 0.90; 35% of human sd)
+  Instrument claude TVD 0.517 | freq % [15.0, 80.0, 2.5, 2.5, 0.0] | hours 7.84 (sd 3.26) | setpoint 22.43 (sd 0.81; 32% of human sd)
+  Instrument gemini TVD 0.292 | freq % [65.8, 24.2, 10.0, 0.0, 0.0] | hours 8.18 (sd 0.79) | setpoint 22.35 (sd 1.12; 44% of human sd)
+  Narrative  claude TVD 0.300 | freq % [35.8, 58.3, 4.2, 1.7, 0.0] | hours 9.07 (sd 2.95) | setpoint 22.28 (sd 0.67; 26% of human sd)
+  Narrative  gemini TVD 0.283 | freq % [65.0, 27.5, 6.7, 0.8, 0.0] | hours 8.11 (sd 0.38) | setpoint 22.33 (sd 1.06; 41% of human sd)
+
+Setpoint sd as share of human sd across the six configurations: 26%-44%
+Setpoint means 22.28-22.72 C; sds 0.67-1.12 C (human 21.35, sd 2.56)
+
+==============================================================================
+FROZEN CRITERIA (improvement = error falls by >=25%)
+==============================================================================
+Instrument Calibration vs Baseline
+  [PASS] M2 count error claude-hot                    +54.4%
+  [PASS] M2 prevalence MAE claude-hot                 +25.2%
+  [PASS] M2 Pearson&Spearman not worse claude-hot   dSpearman +0.218
+  [PASS] M2 count error claude-cold                   +67.5%
+  [fail] M2 prevalence MAE claude-cold                +10.7%
+  [fail] M2 Pearson&Spearman not worse claude-cold  dSpearman -0.062
+  [fail] M3 frequency TVD claude                      +10.1%
+  [fail] M3 setpoint sd error claude                   -8.0%
+  [PASS] M2 count error gemini-hot                    +30.7%
+  [fail] M2 prevalence MAE gemini-hot                 +12.6%
+  [PASS] M2 Pearson&Spearman not worse gemini-hot   dSpearman +0.053
+  [PASS] M2 count error gemini-cold                   +36.5%
+  [PASS] M2 prevalence MAE gemini-cold                +29.9%
+  [PASS] M2 Pearson&Spearman not worse gemini-cold  dSpearman +0.003
+  [fail] M3 frequency TVD gemini                      -34.6%
+  [fail] M3 setpoint sd error gemini                  +13.0%
+
+Narrative Grounding vs Instrument Calibration
+  [fail] M1 has-AC error claude                       -16.0%
+  [fail] M1 NV-preference error claude                -34.8%
+  [PASS] M3 frequency TVD claude                      +41.9%
+  [PASS] M3 hours sd error claude                     +88.6%
+  [fail] M3 setpoint sd error claude                   -8.0%
+  [fail] M1 has-AC error gemini                      -375.0%
+  [fail] M1 NV-preference error gemini                 +5.9%
+  [fail] M3 frequency TVD gemini                       +2.9%
+  [fail] M3 hours sd error gemini                     -18.7%
+  [fail] M3 setpoint sd error gemini                   -3.9%
+  Criteria 1-5 (met by BOTH providers): {'M1 has-AC error': False, 'M1 NV-preference error': False, 'M3 frequency TVD': False, 'M3 hours sd error': False, 'M3 setpoint sd error': False}
+  Criterion 6 (means do not improve at the cost of tighter compression): not met - claude/setpoint, gemini/hours, gemini/setpoint
+  Criterion 7 (same direction for both providers): not met
+  Pre-specified criteria met by Narrative Grounding: 0 of 7
+
+Wrote tables to results/

@@ -1,0 +1,8 @@
+condition,provider,tier,Up to 1 minimum wage,Between 1 and 2 minimum wages,Between 2 and 4 minimum wages,Between 4 and 10 minimum wages,Between 10 and 16 minimum wages,More than 16 minimum wages
+Human,-,share_pct,0.0,27.27,46.15,62.0,64.44,68.57
+baseline,claude,share_pct,0.0,0.0,17.95,34.0,46.67,54.29
+baseline,gemini,share_pct,0.0,0.0,15.38,51.0,75.56,88.57
+instrument,claude,share_pct,0.0,4.55,20.51,36.0,44.44,68.57
+instrument,gemini,share_pct,0.0,0.0,17.95,55.0,80.0,94.29
+narrative,claude,share_pct,0.0,9.09,17.95,35.0,40.0,54.29
+narrative,gemini,share_pct,0.0,0.0,7.69,39.0,68.89,80.0

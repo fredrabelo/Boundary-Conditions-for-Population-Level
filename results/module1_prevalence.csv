@@ -1,0 +1,8 @@
+config,provider,nv_pref_pct,nv_pref_err_pp,has_ac_pct,has_ac_err_pp,n
+Human,-,87.9032,0,56.0484,0,248
+baseline,claude,72.1774,15.7258,32.6613,23.3871,248
+baseline,gemini,57.6613,30.2419,49.1935,6.8548,248
+instrument,claude,69.3548,18.5484,35.8871,20.1613,248
+instrument,gemini,60.4839,27.4194,52.8226,3.2258,248
+narrative,claude,62.9032,25.0,32.6613,23.3871,248
+narrative,gemini,62.0968,25.8065,40.7258,15.3226,248

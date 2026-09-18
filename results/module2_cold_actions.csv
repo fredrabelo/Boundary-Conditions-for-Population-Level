@@ -1,0 +1,11 @@
+action_label,human_pct,baseline_claude_pct,baseline_gemini_pct,instrument_claude_pct,instrument_gemini_pct
+Uso um cobertor/manta,66.5323,86.6935,81.0484,79.4355,78.2258
+Fecho as janelas,59.6774,2.8226,81.0484,0.4032,77.8226
+Troco de roupa,38.7097,98.3871,80.6452,87.0968,76.2097
+Tomo uma bebida quente,28.2258,97.9839,65.3226,84.6774,38.7097
+Tomo um banho quente,20.1613,39.1129,70.9677,0.0,48.3871
+Não se aplica à minha cidade,16.9355,6.4516,18.9516,23.3871,21.7742
+Vou para um lugar mais quente dentro de casa,12.9032,18.1452,4.0323,2.4194,3.2258
+Ligo o aquecedor elétrico,8.0645,14.5161,14.5161,14.5161,14.1129
+Ligo o ar-condicionado (modo aquecer),5.6452,0.0,0.0,0.0,0.0
+Saio de casa para um lugar mais agradável,0.4032,0.0,0.0,0.0,0.0

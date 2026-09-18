@@ -1,0 +1,300 @@
+[
+  {
+    "condition": "baseline",
+    "module": 1,
+    "items": [
+      {
+        "type": "single_choice",
+        "key": "preference",
+        "prompt_pt": "Em casa, no seu dia a dia, você prefere um ambiente naturalmente ventilado ou um ambiente com ar-condicionado?",
+        "config": {
+          "options": [
+            "Ambiente naturalmente ventilado",
+            "Ambiente com ar-condicionado"
+          ]
+        }
+      },
+      {
+        "type": "single_choice",
+        "key": "has_ac",
+        "prompt_pt": "Pensando na sua casa hoje, você tem pelo menos um aparelho de ar-condicionado instalado?",
+        "config": {
+          "options": [
+            "Sim, tenho ar-condicionado em casa",
+            "Não, não tenho ar-condicionado em casa"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "condition": "baseline",
+    "module": 2,
+    "items": [
+      {
+        "type": "multiple_choice",
+        "key": "hot_weather_actions",
+        "prompt_pt": "Quando você está com calor, em casa, o que você costuma fazer?",
+        "config": {
+          "options": [
+            "Troco de roupa",
+            "Vou para um lugar mais fresco dentro de casa",
+            "Ligo o ventilador",
+            "Abro janelas e portas",
+            "Ligo o ar-condicionado",
+            "Tomo uma bebida gelada",
+            "Tomo um banho frio",
+            "Vou para a piscina",
+            "Saio de casa para um lugar mais agradável"
+          ]
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "key": "cold_weather_actions",
+        "prompt_pt": "Quando você está com frio, em casa, o que você costuma fazer?",
+        "config": {
+          "options": [
+            "Não se aplica à minha cidade",
+            "Troco de roupa",
+            "Vou para um lugar mais quente dentro de casa",
+            "Uso um cobertor/manta",
+            "Fecho as janelas",
+            "Ligo o ar-condicionado (modo aquecer)",
+            "Ligo o aquecedor elétrico",
+            "Tomo um banho quente",
+            "Tomo uma bebida quente",
+            "Saio de casa para um lugar mais agradável"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "condition": "baseline",
+    "module": 3,
+    "items": [
+      {
+        "type": "single_choice",
+        "key": "frequency",
+        "prompt_pt": "No verão (dias quentes), com que frequência o ar-condicionado do seu quarto é usado?",
+        "config": {
+          "options": [
+            "Sempre uso",
+            "Uso frequentemente",
+            "Uso às vezes",
+            "Uso raramente",
+            "Nunca uso"
+          ]
+        }
+      },
+      {
+        "type": "open",
+        "key": "hours_per_day",
+        "prompt_pt": "Nos dias em que o ar-condicionado do quarto é usado no verão, aproximadamente quantas horas por dia ele fica ligado? Responda apenas com um número entre 0 e 24 (pode ser fracionário, por exemplo 8.5).",
+        "config": {
+          "max": 24,
+          "min": 0
+        }
+      },
+      {
+        "type": "open",
+        "key": "setpoint_celsius",
+        "prompt_pt": "Qual é a temperatura (setpoint, em °C) que você costuma configurar no ar-condicionado do quarto durante o verão? Responda apenas com um número entre 16 e 28.",
+        "config": {
+          "max": 28,
+          "min": 16
+        }
+      }
+    ]
+  },
+  {
+    "condition": "instrument",
+    "module": 1,
+    "items": [
+      {
+        "type": "single_choice",
+        "key": "preference",
+        "prompt_pt": "Em casa, no seu dia a dia, você prefere um ambiente naturalmente ventilado ou um ambiente com ar-condicionado?",
+        "config": {
+          "options": [
+            "Ambiente naturalmente ventilado",
+            "Ambiente com ar-condicionado"
+          ],
+          "requireExplanation": false
+        }
+      },
+      {
+        "type": "single_choice",
+        "key": "has_ac",
+        "prompt_pt": "Pensando na sua casa hoje, você tem pelo menos um aparelho de ar-condicionado instalado?",
+        "config": {
+          "options": [
+            "Sim, tenho ar-condicionado em casa",
+            "Não, não tenho ar-condicionado em casa"
+          ],
+          "requireExplanation": false
+        }
+      }
+    ]
+  },
+  {
+    "condition": "instrument",
+    "module": 2,
+    "items": [
+      {
+        "type": "multiple_choice",
+        "key": "hot_weather_actions",
+        "prompt_pt": "Quando você está com calor, em casa, o que você costuma fazer?",
+        "config": {
+          "options": [
+            "Troco de roupa",
+            "Vou para um lugar mais fresco dentro de casa",
+            "Ligo o ventilador",
+            "Abro janelas e portas",
+            "Ligo o ar-condicionado",
+            "Tomo uma bebida gelada",
+            "Tomo um banho frio",
+            "Vou para a piscina",
+            "Saio de casa para um lugar mais agradável"
+          ],
+          "selectionPolicy": "habitual_observed",
+          "requireExplanation": false
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "key": "cold_weather_actions",
+        "prompt_pt": "Quando você está com frio, em casa, o que você costuma fazer?",
+        "config": {
+          "options": [
+            "Não se aplica à minha cidade",
+            "Troco de roupa",
+            "Vou para um lugar mais quente dentro de casa",
+            "Uso um cobertor/manta",
+            "Fecho as janelas",
+            "Ligo o ar-condicionado (modo aquecer)",
+            "Ligo o aquecedor elétrico",
+            "Tomo um banho quente",
+            "Tomo uma bebida quente",
+            "Saio de casa para um lugar mais agradável"
+          ],
+          "selectionPolicy": "habitual_observed",
+          "requireExplanation": false
+        }
+      }
+    ]
+  },
+  {
+    "condition": "instrument",
+    "module": 3,
+    "items": [
+      {
+        "type": "single_choice",
+        "key": "frequency",
+        "prompt_pt": "No verão (dias quentes), com que frequência o ar-condicionado do seu quarto é usado?",
+        "config": {
+          "options": [
+            "Sempre uso",
+            "Uso frequentemente",
+            "Uso às vezes",
+            "Uso raramente",
+            "Nunca uso"
+          ],
+          "requireExplanation": false
+        }
+      },
+      {
+        "type": "open",
+        "key": "hours_per_day",
+        "prompt_pt": "Nos dias em que o ar-condicionado do quarto é usado no verão, aproximadamente quantas horas por dia ele fica ligado? Responda apenas com um número entre 0 e 24 (pode ser fracionário, por exemplo 8.5).",
+        "config": {
+          "max": 24,
+          "min": 0,
+          "requireExplanation": false
+        }
+      },
+      {
+        "type": "open",
+        "key": "setpoint_celsius",
+        "prompt_pt": "Qual é a temperatura (setpoint, em °C) que você costuma configurar no ar-condicionado do quarto durante o verão? Responda apenas com um número entre 16 e 28.",
+        "config": {
+          "max": 28,
+          "min": 16,
+          "requireExplanation": false
+        }
+      }
+    ]
+  },
+  {
+    "condition": "narrative",
+    "module": 1,
+    "items": [
+      {
+        "type": "single_choice",
+        "key": "preference",
+        "prompt_pt": "Em casa, no seu dia a dia, você prefere um ambiente naturalmente ventilado ou um ambiente com ar-condicionado?",
+        "config": {
+          "options": [
+            "Ambiente naturalmente ventilado",
+            "Ambiente com ar-condicionado"
+          ],
+          "requireExplanation": false
+        }
+      },
+      {
+        "type": "single_choice",
+        "key": "has_ac",
+        "prompt_pt": "Pensando na sua casa hoje, você tem pelo menos um aparelho de ar-condicionado instalado?",
+        "config": {
+          "options": [
+            "Sim, tenho ar-condicionado em casa",
+            "Não, não tenho ar-condicionado em casa"
+          ],
+          "requireExplanation": false
+        }
+      }
+    ]
+  },
+  {
+    "condition": "narrative",
+    "module": 3,
+    "items": [
+      {
+        "type": "single_choice",
+        "key": "frequency",
+        "prompt_pt": "No verão (dias quentes), com que frequência o ar-condicionado do seu quarto é usado?",
+        "config": {
+          "options": [
+            "Sempre uso",
+            "Uso frequentemente",
+            "Uso às vezes",
+            "Uso raramente",
+            "Nunca uso"
+          ],
+          "requireExplanation": false
+        }
+      },
+      {
+        "type": "open",
+        "key": "hours_per_day",
+        "prompt_pt": "Nos dias em que o ar-condicionado do quarto é usado no verão, aproximadamente quantas horas por dia ele fica ligado? Responda apenas com um número entre 0 e 24 (pode ser fracionário, por exemplo 8.5).",
+        "config": {
+          "max": 24,
+          "min": 0,
+          "requireExplanation": false
+        }
+      },
+      {
+        "type": "open",
+        "key": "setpoint_celsius",
+        "prompt_pt": "Qual é a temperatura (setpoint, em °C) que você costuma configurar no ar-condicionado do quarto durante o verão? Responda apenas com um número entre 16 e 28.",
+        "config": {
+          "max": 28,
+          "min": 16,
+          "requireExplanation": false
+        }
+      }
+    ]
+  }
+]

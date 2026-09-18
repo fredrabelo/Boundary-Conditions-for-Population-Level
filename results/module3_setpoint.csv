@@ -1,0 +1,8 @@
+config,n,mean,sd,median,q1,q3
+human,108,21.3519,2.5552,22.0,20.0,23.0
+baseline_claude,120,22.7167,0.9415,22.0,22.0,24.0
+baseline_gemini,120,22.425,0.9006,23.0,22.0,23.0
+instrument_claude,120,22.425,0.813,22.0,22.0,22.0
+instrument_gemini,120,22.35,1.1154,23.0,22.0,23.0
+narrative_claude,120,22.2833,0.6731,22.0,22.0,22.0
+narrative_gemini,120,22.3333,1.0593,23.0,22.0,23.0

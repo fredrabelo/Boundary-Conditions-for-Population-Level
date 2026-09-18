@@ -1,0 +1,10 @@
+action_label,human_pct,baseline_claude_pct,baseline_gemini_pct,instrument_claude_pct,instrument_gemini_pct
+Ligo o ventilador,65.3226,58.871,80.6452,78.2258,80.2419
+Abro janelas e portas,64.5161,93.1452,83.0645,93.9516,78.2258
+Tomo um banho frio,44.3548,75.4032,92.7419,53.2258,75.4032
+Tomo uma bebida gelada,39.9194,99.5968,100.0,100.0,94.7581
+Ligo o ar-condicionado,36.2903,14.9194,24.1935,8.0645,19.7581
+Troco de roupa,33.4677,65.7258,98.3871,22.9839,86.6935
+Vou para um lugar mais fresco dentro de casa,29.8387,74.5968,1.2097,42.7419,0.0
+Vou para a piscina,9.2742,0.8065,0.0,0.0,0.0
+Saio de casa para um lugar mais agradável,9.2742,4.8387,0.4032,4.0323,0.0

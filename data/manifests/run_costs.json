@@ -1,0 +1,186 @@
+{
+  "runs": [
+    {
+      "run_id": 96,
+      "condition": "baseline",
+      "module": 1,
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "calls": 496,
+      "input_tokens": 312890,
+      "output_tokens": 64819,
+      "cost_usd": 0.318493
+    },
+    {
+      "run_id": 97,
+      "condition": "baseline",
+      "module": 1,
+      "provider": "gemini",
+      "model": "gemini-3.7-flash",
+      "calls": 496,
+      "input_tokens": 152890,
+      "output_tokens": 46491,
+      "cost_usd": 0.144504
+    },
+    {
+      "run_id": 98,
+      "condition": "baseline",
+      "module": 2,
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "calls": 496,
+      "input_tokens": 431682,
+      "output_tokens": 88083,
+      "cost_usd": 0.436049
+    },
+    {
+      "run_id": 99,
+      "condition": "baseline",
+      "module": 2,
+      "provider": "gemini",
+      "model": "gemini-3.7-flash",
+      "calls": 496,
+      "input_tokens": 184138,
+      "output_tokens": 116466,
+      "cost_usd": 0.287426
+    },
+    {
+      "run_id": 100,
+      "condition": "baseline",
+      "module": 3,
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "calls": 360,
+      "input_tokens": 214569,
+      "output_tokens": 45729,
+      "cost_usd": 0.221607
+    },
+    {
+      "run_id": 101,
+      "condition": "baseline",
+      "module": 3,
+      "provider": "gemini",
+      "model": "gemini-3.7-flash",
+      "calls": 360,
+      "input_tokens": 110460,
+      "output_tokens": 32311,
+      "cost_usd": 0.102006
+    },
+    {
+      "run_id": 118,
+      "condition": "instrument",
+      "module": 1,
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "calls": 496,
+      "input_tokens": 291066,
+      "output_tokens": 9855,
+      "cost_usd": 0.170171
+    },
+    {
+      "run_id": 119,
+      "condition": "instrument",
+      "module": 1,
+      "provider": "gemini",
+      "model": "gemini-3.7-flash",
+      "calls": 496,
+      "input_tokens": 152890,
+      "output_tokens": 36782,
+      "cost_usd": 0.1263
+    },
+    {
+      "run_id": 120,
+      "condition": "instrument",
+      "module": 2,
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "calls": 496,
+      "input_tokens": 436146,
+      "output_tokens": 21754,
+      "cost_usd": 0.272458
+    },
+    {
+      "run_id": 121,
+      "condition": "instrument",
+      "module": 2,
+      "provider": "gemini",
+      "model": "gemini-3.7-flash",
+      "calls": 496,
+      "input_tokens": 198522,
+      "output_tokens": 85545,
+      "cost_usd": 0.234843
+    },
+    {
+      "run_id": 122,
+      "condition": "instrument",
+      "module": 3,
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "calls": 360,
+      "input_tokens": 198729,
+      "output_tokens": 4302,
+      "cost_usd": 0.11012
+    },
+    {
+      "run_id": 123,
+      "condition": "instrument",
+      "module": 3,
+      "provider": "gemini",
+      "model": "gemini-3.7-flash",
+      "calls": 360,
+      "input_tokens": 110460,
+      "output_tokens": 29401,
+      "cost_usd": 0.096549
+    },
+    {
+      "run_id": 124,
+      "condition": "narrative",
+      "module": 1,
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "calls": 496,
+      "input_tokens": 290204,
+      "output_tokens": 9950,
+      "cost_usd": 0.169977
+    },
+    {
+      "run_id": 125,
+      "condition": "narrative",
+      "module": 1,
+      "provider": "gemini",
+      "model": "gemini-3.7-flash",
+      "calls": 496,
+      "input_tokens": 154012,
+      "output_tokens": 39299,
+      "cost_usd": 0.13144
+    },
+    {
+      "run_id": 126,
+      "condition": "narrative",
+      "module": 3,
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "calls": 360,
+      "input_tokens": 198504,
+      "output_tokens": 4266,
+      "cost_usd": 0.109917
+    },
+    {
+      "run_id": 127,
+      "condition": "narrative",
+      "module": 3,
+      "provider": "gemini",
+      "model": "gemini-3.7-flash",
+      "calls": 360,
+      "input_tokens": 111675,
+      "output_tokens": 29413,
+      "cost_usd": 0.097028
+    }
+  ],
+  "cost_by_condition_usd": {
+    "baseline": 1.5101,
+    "instrument": 1.0104,
+    "narrative": 0.5084
+  },
+  "total_cost_usd": 3.0289
+}

@@ -1,0 +1,110 @@
+{
+  "module1_adoption": {
+    "population": "all 248 sampled respondents",
+    "evidence_keys": [
+      "city",
+      "state",
+      "region",
+      "bioclimatic_zone",
+      "koppen_climate_classification",
+      "ashrae_climate_zone",
+      "gender",
+      "age",
+      "household_type",
+      "number_of_residents",
+      "monthly_family_income",
+      "highest_education_in_household",
+      "weekend_occupancy_pattern",
+      "number_of_bedrooms",
+      "house_is_sunny",
+      "house_is_well_ventilated",
+      "house_is_hot_in_summer",
+      "house_is_hot_in_winter",
+      "house_is_cool_in_summer",
+      "house_is_cool_in_winter",
+      "house_is_cold_in_winter",
+      "has_ceiling_fan",
+      "has_table_fan",
+      "has_electric_heating",
+      "has_fireplace",
+      "has_wood_stove"
+    ],
+    "held_out": [
+      "preference",
+      "hasAc"
+    ]
+  },
+  "module2_behaviour": {
+    "population": "all 248 sampled respondents",
+    "evidence_keys": [
+      "city",
+      "state",
+      "region",
+      "bioclimatic_zone",
+      "koppen_climate_classification",
+      "ashrae_climate_zone",
+      "gender",
+      "age",
+      "household_type",
+      "number_of_residents",
+      "monthly_family_income",
+      "highest_education_in_household",
+      "weekend_occupancy_pattern",
+      "number_of_bedrooms",
+      "house_is_sunny",
+      "house_is_well_ventilated",
+      "house_is_hot_in_summer",
+      "house_is_hot_in_winter",
+      "house_is_cool_in_summer",
+      "house_is_cool_in_winter",
+      "house_is_cold_in_winter",
+      "has_ceiling_fan",
+      "has_table_fan",
+      "has_electric_heating",
+      "has_fireplace",
+      "has_wood_stove"
+    ],
+    "held_out": [
+      "hotWeatherActions",
+      "coldWeatherActions"
+    ]
+  },
+  "module3_usage": {
+    "population": "120 sampled respondents with bedroom AC",
+    "evidence_keys": [
+      "city",
+      "state",
+      "region",
+      "bioclimatic_zone",
+      "koppen_climate_classification",
+      "ashrae_climate_zone",
+      "gender",
+      "age",
+      "household_type",
+      "number_of_residents",
+      "monthly_family_income",
+      "highest_education_in_household",
+      "weekend_occupancy_pattern",
+      "number_of_bedrooms",
+      "house_is_sunny",
+      "house_is_well_ventilated",
+      "house_is_hot_in_summer",
+      "house_is_hot_in_winter",
+      "house_is_cool_in_summer",
+      "house_is_cool_in_winter",
+      "house_is_cold_in_winter",
+      "has_ceiling_fan",
+      "has_table_fan",
+      "has_electric_heating",
+      "has_fireplace",
+      "has_wood_stove",
+      "bedroom_air_conditioning"
+    ],
+    "bedroom_air_conditioning": true,
+    "held_out": [
+      "frequency",
+      "hoursPerDay",
+      "setpointCelsius"
+    ]
+  }
+}

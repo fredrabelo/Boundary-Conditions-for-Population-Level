@@ -1,0 +1,6 @@
+category,human_pct,baseline_claude,baseline_gemini,instrument_claude,instrument_gemini,narrative_claude,narrative_gemini
+Sempre uso,36.6667,9.1667,58.3333,15.0,65.8333,35.8333,65.0
+Uso frequentemente,28.3333,85.8333,25.0,80.0,24.1667,58.3333,27.5
+Uso às vezes,25.8333,2.5,15.0,2.5,10.0,4.1667,6.6667
+Uso raramente,9.1667,2.5,1.6667,2.5,0.0,1.6667,0.8333
+Nunca uso,0.0,0.0,0.0,0.0,0.0,0.0,0.0
