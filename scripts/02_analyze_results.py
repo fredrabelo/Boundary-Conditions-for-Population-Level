@@ -328,8 +328,34 @@ def main():
         e0 = abs(hs.std() - m3[("baseline", p)]["ss"].std())
         e1 = abs(hs.std() - m3[("instrument", p)]["ss"].std())
         c_rows.append((f"M3 setpoint sd error {p}", drop(e0, e1) >= .25, drop(e0, e1)))
+    # Adoption and usage outcomes under Instrument Calibration (same >=25% rule).
+    for p in PROVIDERS:
+        for label, a, b, h in [("M1 has-AC error", m1[("baseline", p)][1], m1[("instrument", p)][1], h_ac),
+                               ("M1 NV-preference error", m1[("baseline", p)][0], m1[("instrument", p)][0], h_nv)]:
+            e0, e1 = abs(pct(a) - pct(h)), abs(pct(b) - pct(h))
+            c_rows.append((f"{label} {p}", drop(e0, e1) >= .25, drop(e0, e1)))
+        h0 = abs(hh.std() - m3[("baseline", p)]["sh"].std())
+        h1 = abs(hh.std() - m3[("instrument", p)]["sh"].std())
+        c_rows.append((f"M3 hours sd error {p}", drop(h0, h1) >= .25, drop(h0, h1)))
     for name, ok, val in c_rows:
         print(f"  [{'PASS' if ok else 'fail'}] {name:42s} {100 * val:+7.1f}%" if "Pearson" not in name else f"  [{'PASS' if ok else 'fail'}] {name:42s} dSpearman {val:+.3f}")
+
+    def passed_by_outcome(prefixes):
+        """Group checks by outcome (name without the provider suffix); an outcome passes
+        only if it passes for both providers."""
+        grouped = defaultdict(list)
+        for name, ok, _ in c_rows:
+            if name.startswith(prefixes):
+                grouped[name.rsplit(" ", 1)[0]].append(ok)
+        return sum(all(v) for v in grouped.values()), len(grouped)
+
+    n_count = sum(ok for name, ok, _ in c_rows if name.startswith("M2 count error"))
+    n_mae = sum(ok for name, ok, _ in c_rows if name.startswith("M2 prevalence MAE"))
+    print("\nInstrument Calibration summary:")
+    print(f"  Checklist count: {n_count}/4 provider-by-weather cells")
+    print(f"  Item-prevalence MAE: {n_mae}/4 provider-by-weather cells")
+    print("  Adoption outcomes (both providers required): %d/%d" % passed_by_outcome(("M1 has-AC", "M1 NV")))
+    print("  Usage outcomes (both providers required): %d/%d" % passed_by_outcome(("M3 frequency TVD", "M3 hours sd", "M3 setpoint sd")))
 
     print("\nNarrative Grounding vs Instrument Calibration")
     d_rows = []

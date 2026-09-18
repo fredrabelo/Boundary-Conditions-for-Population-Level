@@ -70,7 +70,7 @@ python3 02_analyze_results.py     # prints all reported numbers; writes ../resul
 paired-bootstrap changes, income and climate gradients, action-prevalence vectors
 (MAE, Pearson, Spearman, mean selected count), frequency distributions with total
 variation distance, hours and setpoint means and standard deviations, and the
-pre-specified recovery criteria. The complete output is stored in
+pre-specified recovery criteria, including the counts summarised in the recovery figure. The complete output is stored in
 `results/analysis_output.txt`.
 
 `03_export_model_outputs_from_db.py` reads a private database through the
@@ -99,7 +99,7 @@ condition in `data/manifests/run_manifests.json`.
 ## Data source
 
 Ramos, G., et al. (2020). Adaptive behaviour and air conditioning use in Brazilian
-residential buildings. *Building Research & Information*, 48(8), 863–876.
+residential buildings. *Building Research & Information*, 49(5), 496–511.
 https://doi.org/10.1080/09613218.2020.1804314
 
 Ramos, G., et al. (2020). Dataset for adaptive behaviour and air conditioning use in

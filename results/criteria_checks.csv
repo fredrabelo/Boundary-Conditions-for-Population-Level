@@ -15,6 +15,12 @@ instrument_vs_baseline,M2 prevalence MAE gemini-cold,True,0.2985
 instrument_vs_baseline,M2 Pearson&Spearman not worse gemini-cold,True,0.0031
 instrument_vs_baseline,M3 frequency TVD gemini,False,-0.3462
 instrument_vs_baseline,M3 setpoint sd error gemini,False,0.1298
+instrument_vs_baseline,M1 has-AC error claude,False,0.1379
+instrument_vs_baseline,M1 NV-preference error claude,False,-0.1795
+instrument_vs_baseline,M3 hours sd error claude,False,-1.0921
+instrument_vs_baseline,M1 has-AC error gemini,True,0.5294
+instrument_vs_baseline,M1 NV-preference error gemini,False,0.0933
+instrument_vs_baseline,M3 hours sd error gemini,False,-0.1065
 narrative_vs_instrument,M1 has-AC error claude,False,-0.16
 narrative_vs_instrument,M1 NV-preference error claude,False,-0.3478
 narrative_vs_instrument,M3 frequency TVD claude,True,0.4194

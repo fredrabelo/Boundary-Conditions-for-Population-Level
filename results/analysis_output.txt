@@ -101,6 +101,18 @@ Instrument Calibration vs Baseline
   [PASS] M2 Pearson&Spearman not worse gemini-cold  dSpearman +0.003
   [fail] M3 frequency TVD gemini                      -34.6%
   [fail] M3 setpoint sd error gemini                  +13.0%
+  [fail] M1 has-AC error claude                       +13.8%
+  [fail] M1 NV-preference error claude                -17.9%
+  [fail] M3 hours sd error claude                    -109.2%
+  [PASS] M1 has-AC error gemini                       +52.9%
+  [fail] M1 NV-preference error gemini                 +9.3%
+  [fail] M3 hours sd error gemini                     -10.7%
+
+Instrument Calibration summary:
+  Checklist count: 4/4 provider-by-weather cells
+  Item-prevalence MAE: 2/4 provider-by-weather cells
+  Adoption outcomes (both providers required): 0/2
+  Usage outcomes (both providers required): 0/3
 
 Narrative Grounding vs Instrument Calibration
   [fail] M1 has-AC error claude                       -16.0%
