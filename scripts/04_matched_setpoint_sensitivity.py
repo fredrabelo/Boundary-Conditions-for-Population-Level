@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Matched-profile setpoint sensitivity. Uses only files in this repository.
 Compares human setpoints (n = 108 observed) with synthetic setpoints for (a) all 120
-Module 3 profiles (original comparison) and (b) exactly the same 108 profiles.
+Module 3 profiles (unmatched comparison) and (b) exactly the same 108 profiles.
 Population SD (ddof = 0) throughout. Writes results/matched108_setpoint.csv."""
 import csv, json, random, statistics as st
 from pathlib import Path
