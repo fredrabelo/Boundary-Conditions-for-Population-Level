@@ -1,7 +1,7 @@
-# When Synthetic Populations Fail — research artifact
+# When LLM-Generated Synthetic Populations Fail — research artifact
 
-Data, scripts and result tables for the paper *"When Synthetic Populations Fail:
-Evidence for Boundary Conditions in Population-Level Behavioural Fidelity"*
+Data, scripts and result tables for the paper *"When LLM-Generated Synthetic Populations Fail:
+An Exploratory Evaluation of Residential Behavioural Fidelity"*
 (under double-blind review). The study compares LLM-generated respondent
 populations (`claude-haiku-4-5`, `gemini-3.7-flash`) with the human outcomes of a
 public Brazilian survey on adaptive residential behaviour and air-conditioning use
@@ -54,6 +54,8 @@ scripts/
   01_build_sample.py            raw survey -> respondents.json, module3_subset.json, grounding_spec.json
   02_analyze_results.py         model outputs + human outcomes -> every statistic in the paper
   03_export_model_outputs_from_db.py   extraction of the exported files from the run database (audit only)
+  04_matched_setpoint_sensitivity.py   setpoint comparison on the identical 108 profiles -> results/matched108_setpoint.csv
+  05_criteria_sensitivity.py            recovery criteria at 20/25/30% thresholds -> results/criteria_sensitivity.csv
 ```
 
 ## Reproducing the results
@@ -72,6 +74,13 @@ paired-bootstrap changes, income and climate gradients, action-prevalence vector
 variation distance, hours and setpoint means and standard deviations, and the
 pre-specified recovery criteria, including the counts summarised in the recovery
 figure. The complete output is stored in `results/analysis_output.txt`.
+
+`04_matched_setpoint_sensitivity.py` and `05_criteria_sensitivity.py` use only files in
+this repository and no model calls. The first restricts the synthetic setpoints to the
+108 profiles with an observed human setpoint and reports mean, population SD
+(ddof = 0), the synthetic/human SD ratio and a paired profile-bootstrap interval, next
+to the unmatched 120-profile comparison. The second reports the percentage improvement
+of each quantitative recovery criterion and whether it passes at 20%, 25% and 30%.
 
 `03_export_model_outputs_from_db.py` reads a private database through the
 environment variables `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`; it cannot be

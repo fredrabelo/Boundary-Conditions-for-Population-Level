@@ -1,0 +1,19 @@
+comparison,metric,cell,reference,new,improvement_pct,pass_20,pass_25,pass_30
+instrument_vs_baseline,item-prevalence MAE (pp),claude-hot,26.3441,19.7132,25.2,True,True,False
+instrument_vs_baseline,selected-count error,claude-hot,1.5565,0.7097,54.4,True,True,True
+instrument_vs_baseline,item-prevalence MAE (pp),gemini-hot,29.5699,25.8512,12.6,False,False,False
+instrument_vs_baseline,selected-count error,gemini-hot,1.4839,1.0282,30.7,True,True,True
+instrument_vs_baseline,item-prevalence MAE (pp),claude-cold,25.3629,22.6613,10.7,False,False,False
+instrument_vs_baseline,selected-count error,claude-cold,1.0685,0.3468,67.5,True,True,True
+instrument_vs_baseline,item-prevalence MAE (pp),gemini-cold,18.9113,13.2661,29.9,True,True,False
+instrument_vs_baseline,selected-count error,gemini-cold,1.5927,1.0121,36.5,True,True,True
+narrative_vs_instrument,1 ownership error (pp),claude,20.1613,23.3871,-16.0,False,False,False
+narrative_vs_instrument,2 ventilation-preference error (pp),claude,18.5484,25.0000,-34.8,False,False,False
+narrative_vs_instrument,3 frequency TVD,claude,0.5167,0.3000,41.9,True,True,True
+narrative_vs_instrument,4 hours-SD error,claude,0.2735,0.0310,88.7,True,True,True
+narrative_vs_instrument,5 setpoint-SD error,claude,1.7422,1.8821,-8.0,False,False,False
+narrative_vs_instrument,1 ownership error (pp),gemini,3.2258,15.3226,-375.0,False,False,False
+narrative_vs_instrument,2 ventilation-preference error (pp),gemini,27.4194,25.8065,5.9,False,False,False
+narrative_vs_instrument,3 frequency TVD,gemini,0.2917,0.2833,2.9,False,False,False
+narrative_vs_instrument,4 hours-SD error,gemini,2.1932,2.6026,-18.7,False,False,False
+narrative_vs_instrument,5 setpoint-SD error,gemini,1.4398,1.4959,-3.9,False,False,False
